@@ -78,10 +78,50 @@
     </section>
   </main>
 
+  <!-- SEMANTIC FOOTER -->
   <footer role="contentinfo">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">Shrey<span>.</span></div>
+          <p style="margin-bottom: 2rem;">Designing and developing accessible, high-performance web applications with a focus on user experience and technical excellence.</p>
+          <div class="social-links" aria-label="Social media connections">
+            <a href="#" class="theme-btn" aria-label="LinkedIn Profile">In</a>
+            <a href="#" class="theme-btn" aria-label="GitHub Profile">Gh</a>
+            <a href="#" class="theme-btn" aria-label="Twitter Profile">Tw</a>
+          </div>
+        </div>
+        
+        <nav class="footer-col" aria-label="Quick Links">
+          <h3>Sitemap</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h3>Stay in touch</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Subscribe to my newsletter for the latest in web accessibility and full-stack development.</p>
+          <form class="newsletter-form" aria-label="Newsletter subscription">
+            <div style="display: flex; gap: 0.5rem;">
+              <input type="email" placeholder="Email Address" aria-label="Email for newsletter" required style="padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary); width: 100%;">
+              <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1rem; border-radius: 8px;">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
       <div class="footer-bottom">
         <p>&copy; <span id="year"></span> Shreyash. All rights reserved.</p>
+        <nav aria-label="Legal navigation">
+          <ul style="display: flex; gap: 1.5rem;">
+            <li><a href="#" style="font-size: 0.85rem;">Privacy Policy</a></li>
+            <li><a href="#" style="font-size: 0.85rem;">Terms of Service</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </footer>
