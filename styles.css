@@ -323,18 +323,94 @@ blockquote.card {
   border-left: 4px solid var(--accent-primary);
 }
 
-/* ─── FOOTER ─── */
+/* ─── FOOTER (Premium Overhaul) ─── */
 footer {
-  padding: 6rem 0 3rem;
+  padding: 8rem 0 3rem;
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
+  position: relative;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
+}
+
+.footer-brand .nav-logo {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand p {
+  color: var(--text-secondary);
+  max-width: 350px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.footer-col h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-primary);
+  margin-bottom: 2rem;
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-col a {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: var(--accent-primary);
+  transform: translateX(5px);
+  display: inline-block;
+}
+
+.newsletter-form {
+  margin-top: 1.5rem;
+}
+
+.newsletter-form .form-group-inline {
+  display: flex;
+  background: var(--bg-primary);
+  padding: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: 0.3s;
+}
+
+.newsletter-form .form-group-inline:focus-within {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(0, 212, 170, 0.1);
+}
+
+.newsletter-form input {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+}
+
+.newsletter-form .btn-submit {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
 }
 
 .footer-bottom {
@@ -345,9 +421,13 @@ footer {
   align-items: center;
   gap: 2rem;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
+
 @media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  }
   .footer-bottom {
     flex-direction: row;
     justify-content: space-between;
