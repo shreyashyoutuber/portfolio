@@ -11,11 +11,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const clearCompletedBtn = document.getElementById('clear-completed');
   const filterBtns = document.querySelectorAll('.filter-btn');
 
+  const progressBar = document.getElementById('progress-bar');
+  const progressText = document.getElementById('progress-text');
+  const todoQuote = document.getElementById('todo-quote');
+
+  const quotes = [
+    "The secret of getting ahead is getting started.",
+    "Small progress is still progress.",
+    "Don't stop until you're proud.",
+    "Your future self will thank you for what you do today.",
+    "Quality is not an act, it is a habit.",
+    "Accessibility is not a feature, it's a right.",
+    "Clean code always looks like it was written by someone who cares."
+  ];
+
   let todos = JSON.parse(localStorage.getItem('shrey-todos')) || [];
   let currentFilter = 'all';
 
   // ─── INITIAL RENDER ───
   renderTodos();
+  setRandomQuote();
 
   // ─── EVENT LISTENERS ───
   
@@ -26,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (text) {
       addTodo(text);
       todoInput.value = '';
+      setRandomQuote();
     }
   });
 
@@ -47,10 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
       deleteTodo(id);
     }
 
-    // Edit Task (Placeholder for future enhancement)
+    // Edit Task
     if (target.classList.contains('edit') || target.closest('.edit')) {
-      const newText = prompt('Edit your task:', todoItem.querySelector('.todo-text').textContent);
-      if (newText && newText.trim()) {
+      const currentText = todoItem.querySelector('.todo-text').textContent;
+      const newText = prompt('Edit your task:', currentText);
+      if (newText !== null && newText.trim() !== "" && newText !== currentText) {
         editTodo(id, newText.trim());
       }
     }
@@ -73,6 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ─── CORE FUNCTIONS ───
+
+  function setRandomQuote() {
+    const index = Math.floor(Math.random() * quotes.length);
+    todoQuote.textContent = `"${quotes[index]}"`;
+  }
 
   function addTodo(text) {
     const newTodo = {
@@ -141,8 +163,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateStats() {
-    const activeCount = todos.filter(t => !t.completed).length;
+    const total = todos.length;
+    const completedCount = todos.filter(t => t.completed).length;
+    const activeCount = total - completedCount;
+    
     itemsLeft.textContent = `${activeCount} task${activeCount !== 1 ? 's' : ''} remaining`;
+    
+    const percentage = total === 0 ? 0 : Math.round((completedCount / total) * 100);
+    progressBar.style.width = `${percentage}%`;
+    progressText.textContent = `${percentage}%`;
   }
 
   function escapeHTML(str) {

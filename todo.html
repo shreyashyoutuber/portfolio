@@ -191,16 +191,32 @@
         </div>
 
         <div class="todo-app-container">
+          <!-- MOTIVATIONAL SECTION -->
+          <div id="quote-container" class="card" style="margin-bottom: 2rem; border-left: 4px solid var(--accent-primary); padding: 1.5rem;">
+            <p id="todo-quote" style="font-style: italic; color: var(--text-secondary);">"The secret of getting ahead is getting started."</p>
+          </div>
+
           <div class="card">
+            <!-- PROGRESS BAR -->
+            <div style="margin-bottom: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.85rem;">
+                <span>Completion Progress</span>
+                <span id="progress-text">0%</span>
+              </div>
+              <div style="width: 100%; height: 6px; background: var(--bg-secondary); border-radius: 10px; overflow: hidden;">
+                <div id="progress-bar" style="width: 0%; height: 100%; background: var(--accent-primary); transition: 0.5s;"></div>
+              </div>
+            </div>
+
             <!-- INPUT -->
             <form id="todo-form" class="todo-input-group">
-              <input type="text" id="todo-input" placeholder="What needs to be done?" aria-label="Add new task" required>
-              <button type="submit" class="btn btn-primary" style="padding: 1.1rem 2rem;">Add</button>
+              <input type="text" id="todo-input" placeholder="Add a new goal..." aria-label="Add new task" required>
+              <button type="submit" class="btn btn-primary" style="padding: 1.1rem 2rem;">Add Task</button>
             </form>
 
             <!-- FILTERS -->
             <div class="todo-filters" role="group" aria-label="Filter tasks">
-              <button class="filter-btn active" data-filter="all">All Tasks</button>
+              <button class="filter-btn active" data-filter="all">All</button>
               <button class="filter-btn" data-filter="active">Active</button>
               <button class="filter-btn" data-filter="completed">Completed</button>
             </div>
@@ -213,10 +229,57 @@
             <!-- STATS -->
             <div class="todo-stats">
               <span id="items-left">0 tasks remaining</span>
-              <button id="clear-completed" style="background: none; border: none; color: var(--accent-secondary); margin-left: 1rem; cursor: pointer; text-decoration: underline;">Clear Completed</button>
+              <button id="clear-completed" style="background: none; border: none; color: var(--accent-secondary); margin-left: 1rem; cursor: pointer; text-decoration: underline;">Clear Finished</button>
             </div>
           </div>
         </div>
+
+        <!-- EDUCATIONAL CONTENT SECTION -->
+        <div class="grid" style="margin-top: 6rem; gap: 3rem;">
+          <div class="card" style="border-top: 4px solid var(--accent-primary);">
+            <h2 style="margin-bottom: 1.5rem;">Why this project?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">This isn't just a list; it's a demonstration of complex state synchronization and architectural principles in vanilla JavaScript.</p>
+            <ul style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
+              <li><strong>✓ Local Persistence:</strong> Uses <code>localStorage</code> API to sync state across browser sessions.</li>
+              <li><strong>✓ Event Delegation:</strong> A single listener handles all task interactions, optimizing memory usage.</li>
+              <li><strong>✓ State Filtering:</strong> Implements pure function logic to filter views without mutating the source of truth.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="border-top: 4px solid var(--accent-secondary);">
+            <h2 style="margin-bottom: 1.5rem;">Pro Tips & Features</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div>
+                <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Quick Edit</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">Click the pencil icon to update any task instantly without deleting it.</p>
+              </div>
+              <div>
+                <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Auto-Save</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">Don't worry about refreshing; your data is safe and encrypted locally.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FUTURE ROADMAP -->
+        <section style="margin-top: 6rem; text-align: center;">
+          <span class="label" aria-hidden="true">The Vision</span>
+          <h2 class="title">Coming Soon</h2>
+          <div class="skills-grid" style="margin-top: 3rem;">
+            <div class="card">
+              <h3>Task Categories</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Group your tasks by Work, Personal, or Fitness labels.</p>
+            </div>
+            <div class="card">
+              <h3>Due Dates</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Add deadlines and get visual warnings for overdue items.</p>
+            </div>
+            <div class="card">
+              <h3>Drag & Drop</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Rearrange your priorities with a smooth, native-feel interface.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   </main>
