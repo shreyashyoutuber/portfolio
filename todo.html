@@ -209,9 +209,20 @@
             </div>
 
             <!-- INPUT -->
-            <form id="todo-form" class="todo-input-group">
-              <input type="text" id="todo-input" placeholder="Add a new goal..." aria-label="Add new task" required>
-              <button type="submit" class="btn btn-primary" style="padding: 1.1rem 2rem;">Add Task</button>
+            <form id="todo-form" class="todo-input-group" style="flex-direction: column; gap: 1rem;">
+              <div style="display: flex; gap: 1rem; width: 100%;">
+                <input type="text" id="todo-input" placeholder="Add a new goal..." aria-label="Add new task" required style="flex: 2;">
+                <select id="todo-category" aria-label="Select category" style="padding: 1rem; border-radius: 12px; border: 2px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary);">
+                  <option value="Work">Work</option>
+                  <option value="Personal">Personal</option>
+                  <option value="Fitness">Fitness</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div style="display: flex; gap: 1rem; width: 100%;">
+                <input type="date" id="todo-date" aria-label="Due date" style="padding: 1rem; border-radius: 12px; border: 2px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); flex: 1;">
+                <button type="submit" class="btn btn-primary" style="padding: 1.1rem 2rem; flex: 1;">Add Task</button>
+              </div>
             </form>
 
             <!-- FILTERS -->
@@ -230,33 +241,6 @@
             <div class="todo-stats">
               <span id="items-left">0 tasks remaining</span>
               <button id="clear-completed" style="background: none; border: none; color: var(--accent-secondary); margin-left: 1rem; cursor: pointer; text-decoration: underline;">Clear Finished</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- EDUCATIONAL CONTENT SECTION -->
-        <div class="grid" style="margin-top: 6rem; gap: 3rem;">
-          <div class="card" style="border-top: 4px solid var(--accent-primary);">
-            <h2 style="margin-bottom: 1.5rem;">Why this project?</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">This isn't just a list; it's a demonstration of complex state synchronization and architectural principles in vanilla JavaScript.</p>
-            <ul style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
-              <li><strong>✓ Local Persistence:</strong> Uses <code>localStorage</code> API to sync state across browser sessions.</li>
-              <li><strong>✓ Event Delegation:</strong> A single listener handles all task interactions, optimizing memory usage.</li>
-              <li><strong>✓ State Filtering:</strong> Implements pure function logic to filter views without mutating the source of truth.</li>
-            </ul>
-          </div>
-
-          <div class="card" style="border-top: 4px solid var(--accent-secondary);">
-            <h2 style="margin-bottom: 1.5rem;">Pro Tips & Features</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-              <div>
-                <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Quick Edit</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Click the pencil icon to update any task instantly without deleting it.</p>
-              </div>
-              <div>
-                <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Auto-Save</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Don't worry about refreshing; your data is safe and encrypted locally.</p>
-              </div>
             </div>
           </div>
         </div>
