@@ -1,174 +1,101 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Featured Projects by Shreyash - Full Stack Developer. Explore web applications, AI tools, and mobile experiences.">
-<meta name="keywords" content="projects, portfolio, web applications, react, nodejs, full stack developer">
-<meta name="author" content="Shreyash">
-<title>Projects | Shreyash - Full Stack Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Shreyash - Full Stack Developer</title>
+  <meta name="description" content="Explore a collection of web development projects by Shreyash, featuring AI tools, property platforms, and mobile apps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header role="banner">
-  <div class="nav-container">
-    <div class="nav-logo">
-      <a href="index.html" aria-label="Shreyash - Home"><span>S</span>hrey<span>.</span></a>
-    </div>
-    <div class="nav-actions">
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
-        <span class="sun-icon" aria-hidden="true">☀️</span>
-        <span class="moon-icon" aria-hidden="true">🌙</span>
-      </button>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
-        <span class="hamburger" aria-hidden="true"></span>
-      </button>
-      <nav aria-label="Primary navigation">
-        <ul id="primary-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html" aria-current="page">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
-
-<main id="main-content">
-  <section class="page-hero" aria-labelledby="projects-page-heading">
-    <div class="page-hero-inner">
-      <span class="section-label" aria-hidden="true">My Portfolio</span>
-      <h1 id="projects-page-heading">Featured Projects</h1>
-      <p>A curated selection of projects I've built - from SaaS platforms to AI tools.</p>
-    </div>
-  </section>
-
-  <!-- FILTER TABS -->
-  <section aria-labelledby="filter-heading" style="padding:2rem 1.5rem 0">
-    <div class="section-inner">
-      <h2 id="filter-heading" class="sr-only">Filter projects by category</h2>
-      <div role="tablist" aria-label="Project category filter" style="display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:0">
-        <button role="tab" aria-selected="true" aria-controls="projects-list" id="tab-all" class="btn btn-primary filter-tab" data-filter="all">All Projects</button>
-        <button role="tab" aria-selected="false" aria-controls="projects-list" id="tab-web" class="btn btn-outline filter-tab" data-filter="web">Web Apps</button>
-        <button role="tab" aria-selected="false" aria-controls="projects-list" id="tab-mobile" class="btn btn-outline filter-tab" data-filter="mobile">Mobile</button>
-        <button role="tab" aria-selected="false" aria-controls="projects-list" id="tab-ai" class="btn btn-outline filter-tab" data-filter="ai">AI / ML</button>
+  <header role="banner">
+    <div class="container nav-container">
+      <div class="nav-logo">
+        <a href="index.html" aria-label="Shreyash - Home Page">Shrey<span>.</span></a>
+      </div>
+      <div class="nav-actions">
+        <nav id="primary-navigation" aria-label="Main Navigation">
+          <ul id="primary-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode">
+          <span class="sun-icon" aria-hidden="true">☀️</span>
+          <span class="moon-icon" aria-hidden="true">🌙</span>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open mobile navigation menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section id="projects-list" aria-label="Project gallery">
-    <div class="section-inner">
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <article class="project-card" data-category="web">
-          <div class="project-img">
-            <img src="assets/images/project1.png" alt="AI Floor Planner dashboard interface" loading="lazy">
-          </div>
-          <div class="project-content">
-            <span class="section-label" style="font-size:.7rem">Web App</span>
-            <h3>AI Floor Planner</h3>
-            <p>A logic-based drag-and-drop tool for home layout design with expert-based suggestions.</p>
-            <div class="project-tags">
-              <span>React</span><span>Canvas API</span><span>Node.js</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="btn btn-outline" style="padding:.5rem 1rem;font-size:.8rem">Live Demo</a>
-              <a href="#" class="social-link" style="width:36px;height:36px">🔗</a>
-            </div>
-          </div>
-        </article>
+  <main id="main-content">
+    <section class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="label" aria-hidden="true">Portfolio</span>
+          <h1 id="projects-title" class="title">Featured Projects</h1>
+          <p>A selection of my recent work in web and mobile development.</p>
+        </div>
 
-        <!-- Project 2 -->
-        <article class="project-card" data-category="web">
-          <div class="project-img">
-            <img src="assets/images/project2.png" alt="BharatHome Value property valuation tool" loading="lazy">
-          </div>
-          <div class="project-content">
-            <span class="section-label" style="font-size:.7rem">Full Stack</span>
-            <h3>BharatHome Value</h3>
-            <p>Real-time property valuation platform with microservices architecture and interactive maps.</p>
-            <div class="project-tags">
-              <span>Next.js</span><span>Spring Boot</span><span>PostgreSQL</span>
+        <!-- PROJECTS GRID (Semantic Grid) -->
+        <div class="skills-grid" id="projects-list">
+          
+          <article class="card project-card" aria-labelledby="p1-title">
+            <img src="assets/images/project1.png" alt="AI Floor Planner interface" loading="lazy" style="border-radius: 16px; margin-bottom: 2rem;">
+            <span class="label" style="font-size: 0.7rem;">AI & Architecture</span>
+            <h2 id="p1-title">AI Floor Planner</h2>
+            <p>Interactive tool for designing property layouts using intelligent suggestions.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">React</span>
+              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">Canvas API</span>
             </div>
-            <div class="project-links">
-              <a href="#" class="btn btn-outline" style="padding:.5rem 1rem;font-size:.8rem">Live Demo</a>
-              <a href="#" class="social-link" style="width:36px;height:36px">🔗</a>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Project 3 -->
-        <article class="project-card" data-category="mobile">
-          <div class="project-img">
-            <img src="assets/images/project3.png" alt="Fitness tracker mobile app interface" loading="lazy">
-          </div>
-          <div class="project-content">
-            <span class="section-label" style="font-size:.7rem">Mobile</span>
-            <h3>FitTrack AI</h3>
-            <p>Mobile application that uses computer vision to track workout form and provide real-time feedback.</p>
-            <div class="project-tags">
-              <span>React Native</span><span>TensorFlow.js</span><span>Firebase</span>
+          <article class="card project-card" aria-labelledby="p2-title">
+            <img src="assets/images/project2.png" alt="BharatHome Value dashboard" loading="lazy" style="border-radius: 16px; margin-bottom: 2rem;">
+            <span class="label" style="font-size: 0.7rem;">Real Estate</span>
+            <h2 id="p2-title">BharatHome Value</h2>
+            <p>Comprehensive property valuation platform for the Indian market.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">Next.js</span>
+              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">Spring Boot</span>
             </div>
-            <div class="project-links">
-              <a href="#" class="btn btn-outline" style="padding:.5rem 1rem;font-size:.8rem">View Case Study</a>
-              <a href="#" class="social-link" style="width:36px;height:36px">🔗</a>
+          </article>
+
+          <article class="card project-card" aria-labelledby="p3-title">
+            <img src="assets/images/project3.png" alt="Fitness mobile application" loading="lazy" style="border-radius: 16px; margin-bottom: 2rem;">
+            <span class="label" style="font-size: 0.7rem;">Health & Fitness</span>
+            <h2 id="p3-title">FitTrack Pro</h2>
+            <p>Mobile-first application for personalized workout tracking and nutrition.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">Node.js</span>
+              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">Firebase</span>
             </div>
-          </div>
-        </article>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Shreyash. All rights reserved.</p>
       </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer role="contentinfo">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="nav-logo"><a href="index.html" aria-label="Shreyash - Home"><span>S</span>hrey<span>.</span></a></div>
-        <p>Building accessible, high-performance web experiences with passion and precision.</p>
-      </div>
-      <nav class="footer-col" aria-label="Footer site links">
-        <h3>Navigation</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer-col">
-        <h3>Connect</h3>
-        <ul>
-          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">GitHub</a></li>
-          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> Shreyash. All rights reserved.</p>
-      <div class="social-links" aria-label="Social media links">
-        <a href="https://github.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">🔗</a>
-        <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-      </div>
-    </div>
-  </div>
-</footer>
-<style>
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.filter-tab{margin:0}
-.project-img { overflow: hidden; border-radius: 16px; margin-bottom: 1.5rem; }
-.project-img img { transition: 0.5s; width: 100%; height: 200px; object-fit: cover; }
-.project-card:hover .project-img img { transform: scale(1.1); }
-.project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0 1.5rem; }
-.project-tags span { font-size: 0.75rem; background: var(--bg2); padding: 0.25rem 0.75rem; border-radius: 6px; color: var(--muted); border: 1px solid var(--border); }
-.project-links { display: flex; align-items: center; gap: 1rem; }
-</style>
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
