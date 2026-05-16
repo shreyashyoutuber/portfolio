@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Shreyash - Full Stack Developer. Send a message for collaboration, freelance work, or job opportunities.">
+<meta name="keywords" content="contact, hire developer, freelance, collaboration, full stack developer">
+<meta name="author" content="Shreyash">
+<title>Contact | Shreyash - Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><link rel="manifest" href="manifest.json">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header role="banner">
+  <div class="nav-container">
+    <div class="nav-logo"><a href="index.html" aria-label="Shreyash - Home"><span>S</span>hreyash<span>.</span></a></div><div class="nav-actions"><button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode"><span class="sun-icon" aria-hidden="true">??</span><span class="moon-icon" aria-hidden="true">??</span></button><button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+    <nav aria-label="Primary navigation">
+      <ul id="primary-nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="page-hero" aria-labelledby="contact-page-heading">
+    <div class="page-hero-inner">
+      <span class="section-label" aria-hidden="true">Let's Talk</span>
+      <h1 id="contact-page-heading">Get In Touch</h1>
+      <p>Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact-section-heading" style="padding:5rem 1.5rem">
+    <div class="section-inner">
+      <h2 id="contact-section-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Contact section</h2>
+      <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <span class="section-label" aria-hidden="true">Contact Info</span>
+          <h3 style="font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-1px;margin-bottom:1rem">Let's Build Something Great Together</h3>
+          <p>I'm currently available for freelance projects, full-time roles, and exciting collaborations. Response time within 24 hours.</p>
+
+          <address style="font-style:normal;margin-top:2rem">
+            <div class="contact-detail">
+              <div class="contact-icon" aria-hidden="true">&#x1F4E7;</div>
+              <div class="contact-detail-text">
+                <strong>Email</strong>
+                <a href="mailto:Shreyash@example.com" aria-label="Send email to Shreyash@example.com">Shreyash@example.com</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon" aria-hidden="true">&#x1F4DE;</div>
+              <div class="contact-detail-text">
+                <strong>Phone</strong>
+                <a href="tel:+919876543210" aria-label="Call +91 98765 43210">+91 98765 43210</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon" aria-hidden="true">&#x1F4CD;</div>
+              <div class="contact-detail-text">
+                <strong>Location</strong>
+                <span>Mumbai, Maharashtra, India</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon" aria-hidden="true">&#x23F0;</div>
+              <div class="contact-detail-text">
+                <strong>Availability</strong>
+                <span>Mon - Fri, 9 AM - 6 PM IST</span>
+              </div>
+            </div>
+          </address>
+
+          <div style="margin-top:2rem">
+            <h3 style="font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:1rem">Follow Me</h3>
+            <div class="social-links" aria-label="Social media profiles">
+              <a href="https://github.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile (opens in new tab)">&#x1D53E;</a>
+              <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile (opens in new tab)">in</a>
+              <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Twitter profile (opens in new tab)">&#x1D54F;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="form-card">
+          <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:.25rem">Send Me a Message</h3>
+          <p style="color:var(--muted);font-size:.9rem;margin-bottom:2rem">Fields marked with <span aria-label="required" style="color:var(--accent)">*</span> are required.</p>
+
+          <!-- Success message (shown via JS) -->
+          <div class="success-msg" id="success-msg" role="alert" aria-live="polite" aria-atomic="true">
+            &#x2705; Message sent successfully! I'll get back to you within 24 hours.
+          </div>
+
+          <form id="contact-form" novalidate aria-label="Contact form">
+            <!-- Name field -->
+            <div class="form-group">
+              <label for="name">
+                Full Name <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                placeholder="John Doe"
+                required
+                aria-required="true"
+                aria-describedby="name-error"
+                aria-invalid="false"
+              >
+              <p class="field-error" id="name-error" role="alert">Please enter your full name.</p>
+            </div>
+
+            <!-- Email field -->
+            <div class="form-group">
+              <label for="email">
+                Email Address <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="john@example.com"
+                required
+                aria-required="true"
+                aria-describedby="email-error"
+                aria-invalid="false"
+              >
+              <p class="field-error" id="email-error" role="alert">Please enter a valid email address.</p>
+            </div>
+
+            <!-- Subject field -->
+            <div class="form-group">
+              <label for="subject">Subject <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Project Inquiry"
+                required
+                aria-required="true"
+                aria-describedby="subject-error"
+                aria-invalid="false"
+              >
+              <p class="field-error" id="subject-error" role="alert">Please enter a subject.</p>
+            </div>
+
+            <!-- Message field -->
+            <div class="form-group">
+              <label for="message">
+                Message <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell me about your project, timeline, and budget..."
+                required
+                aria-required="true"
+                aria-describedby="message-error message-hint"
+                aria-invalid="false"
+                minlength="20"
+              ></textarea>
+              <p id="message-hint" style="font-size:.75rem;color:var(--muted);margin-top:.3rem">Minimum 20 characters</p>
+              <p class="field-error" id="message-error" role="alert">Please enter a message of at least 20 characters.</p>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary form-submit" id="submit-btn" aria-describedby="submit-status">
+              <span id="btn-text">Send Message &#x2192;</span>
+              <span id="btn-loading" aria-hidden="true" style="display:none">Sending...</span>
+            </button>
+            <p id="submit-status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <aside aria-labelledby="faq-heading" style="background:var(--bg2);padding:5rem 1.5rem;border-top:1px solid var(--border)">
+    <div class="section-inner">
+      <span class="section-label" aria-hidden="true">FAQ</span>
+      <h2 id="faq-heading" class="section-title">Common Questions</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2rem">
+        <div class="skill-card">
+          <h3 style="margin-bottom:.5rem">What's your typical project timeline?</h3>
+          <p>Small projects take 1-2 weeks. Complex full-stack apps typically take 4-8 weeks depending on scope.</p>
+        </div>
+        <div class="skill-card">
+          <h3 style="margin-bottom:.5rem">Do you work with international clients?</h3>
+          <p>Yes! I work with clients globally. I'm comfortable with async communication across time zones.</p>
+        </div>
+        <div class="skill-card">
+          <h3 style="margin-bottom:.5rem">What are your payment terms?</h3>
+          <p>Typically 50% upfront and 50% on delivery. I accept bank transfers, PayPal, and UPI.</p>
+        </div>
+        <div class="skill-card">
+          <h3 style="margin-bottom:.5rem">Do you provide post-launch support?</h3>
+          <p>Yes, I offer 30 days of free bug fixes post-launch, and ongoing maintenance packages are available.</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo"><a href="index.html" aria-label="Shreyash - Home"><span>S</span>hreyash<span>.</span></a></div>
+        <p>Building accessible, high-performance web experiences with passion and precision.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer site links">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Shreyash. All rights reserved.</p>
+      <div class="social-links" aria-label="Social media links">
+        <a href="https://github.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#x1D53E;</a>
+        <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,95 @@
+:root {
+  --bg: #0a0f1e; --bg2: #111827; --card: #1a2235;
+  --accent: #00d4aa; --accent2: #7c3aed;
+  --text: #e2e8f0; --muted: #94a3b8;
+  --border: #2d3748; --shadow: 0 8px 32px rgba(0,0,0,0.4);
+  /* Fluid Typography (Advanced CSS3) */
+  --fs-h1: clamp(2.5rem, 8vw, 4.5rem);
+  --fs-h2: clamp(1.8rem, 5vw, 2.8rem);
+  --fs-body: clamp(1rem, 1vw + 0.8rem, 1.15rem);
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc; --bg2: #f1f5f9; --card: #ffffff;
+  --accent: #0d9488; --accent2: #6d28d9;
+  --text: #0f172a; --muted: #475569;
+  --border: #e2e8f0; --shadow: 0 8px 32px rgba(0,0,0,0.06);
+}
+
+/* ─── BASE STYLES (Mobile First) ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: var(--fs-body);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ─── STUNNING GLASS NAVIGATION ─── */
+header {
+  position: fixed; top: 0; width: 100%; z-index: 1000;
+  background: rgba(10, 15, 30, 0.8);
+  backdrop-filter: blur(12px); /* Glassmorphism */
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+[data-theme="light"] header { background: rgba(248, 250, 252, 0.8); }
+
+.nav-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+  height: 70px; display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-logo a {
+  font-size: 1.5rem; font-weight: 800; color: var(--accent);
+  text-decoration: none; letter-spacing: -1px;
+}
+
+/* ─── ADVANCED GRID LAYOUTS ─── */
+.hero-inner {
+  display: grid; grid-template-columns: 1fr; gap: 3rem;
+  align-items: center; text-align: center; padding-top: 80px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* About Page - Advanced Grid Areas */
+.about-grid {
+  display: grid;
+  grid-template-areas: "image" "content";
+  gap: 3rem;
+}
+.about-img-col { grid-area: image; }
+.about-content { grid-area: content; }
+
+/* ─── COMPONENTS (Flexbox) ─── */
+.nav-actions { display: flex; align-items: center; gap: 1rem; }
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.8rem 2rem; border-radius: 12px; font-weight: 700;
+  transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+  border: none; text-decoration: none;
+}
+.btn-primary { background: var(--accent); color: #000; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 212, 170, 0.3); }
+
+/* ─── RESPONSIVE QUERIES ─── */
+@media (min-width: 768px) {
+  .hero-inner { grid-template-columns: 1.2fr 0.8fr; text-align: left; }
+  .hero-cta { justify-content: flex-start; }
+  .about-grid { grid-template-areas: "image content"; grid-template-columns: 1fr 1.5fr; }
+}
+
+/* Accessibility */
+.skip-link { position: absolute; top: -50px; left: 0; background: var(--accent); padding: 10px; z-index: 1001; transition: top 0.3s; }
+.skip-link:focus { top: 0; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
