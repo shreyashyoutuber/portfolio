@@ -5,7 +5,8 @@
 
 :root {
   /* Core Palette (Dark Mode Default) */
-  --bg-primary: #0a0f1e;
+  --bg-primary-rgb: 10, 15, 30;
+  --bg-primary: rgb(var(--bg-primary-rgb));
   --bg-secondary: #111827;
   --bg-card: rgba(26, 34, 53, 0.7);
   --text-primary: #f8fafc;
@@ -33,7 +34,8 @@
 
 /* Light Mode Overrides */
 [data-theme="light"] {
-  --bg-primary: #f8fafc;
+  --bg-primary-rgb: 248, 250, 252;
+  --bg-primary: rgb(var(--bg-primary-rgb));
   --bg-secondary: #f1f5f9;
   --bg-card: #ffffff;
   --text-primary: #0f172a;
@@ -94,7 +96,7 @@ header {
   width: 100%;
   height: var(--nav-height);
   z-index: 1000;
-  background: rgba(var(--bg-primary), 0.8);
+  background: rgba(var(--bg-primary-rgb), 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
@@ -119,7 +121,7 @@ header {
 
 .nav-actions { display: flex; align-items: center; gap: 2rem; }
 
-#primary-nav ul { display: flex; gap: 2.5rem; }
+#primary-nav { display: flex; gap: 2.5rem; }
 #primary-nav a {
   font-weight: 600;
   font-size: 0.95rem;
