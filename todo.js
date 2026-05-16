@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const clearCompletedBtn = document.getElementById('clear-completed');
   const filterBtns = document.querySelectorAll('.filter-btn');
 
+  const progressBar = document.getElementById('progress-bar');
+  const progressText = document.getElementById('progress-text');
+  const todoQuote = document.getElementById('todo-quote');
   const todoCategory = document.getElementById('todo-category');
   const todoDate = document.getElementById('todo-date');
 
@@ -206,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div style="flex: 1; display: flex; flex-direction: column; gap: 0.25rem;">
           <span class="todo-text">${escapeHTML(todo.text)}</span>
           <div style="display: flex; gap: 0.75rem; align-items: center;">
-            <span style="font-size: 0.7rem; color: var(--accent-primary); background: rgba(0,212,170,0.1); padding: 0.1rem 0.5rem; border-radius: 4px;">${todo.category}</span>
+            <span style="font-size: 0.7rem; color: var(--accent-primary); background: rgba(0,212,170,0.1); padding: 0.1rem 0.5rem; border-radius: 4px;">${todo.category || 'Other'}</span>
             ${todo.dueDate ? `<span style="font-size: 0.7rem; color: ${isOverdue ? '#ef4444' : 'var(--text-secondary)'};">📅 ${new Date(todo.dueDate).toLocaleDateString()}</span>` : ''}
           </div>
         </div>
