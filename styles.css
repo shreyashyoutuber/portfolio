@@ -350,6 +350,12 @@ footer {
   font-size: 0.9rem;
 }
 
+.social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .footer-col h3 {
   font-size: 0.75rem;
   text-transform: uppercase;
