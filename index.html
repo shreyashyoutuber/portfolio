@@ -124,6 +124,38 @@
       </div>
     </aside>
 
+    <!-- MY WORKFLOW SECTION -->
+    <section class="section" aria-labelledby="workflow-title" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="label" aria-hidden="true">Process</span>
+          <h2 id="workflow-title" class="title">How I Bring Ideas to Life</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="card">
+            <span class="label" style="font-size: 1.5rem; margin-bottom: 0.5rem;">01</span>
+            <h3>Strategy & Planning</h3>
+            <p>Defining goals, user personas, and information architecture to build a solid foundation.</p>
+          </div>
+          <div class="card">
+            <span class="label" style="font-size: 1.5rem; margin-bottom: 0.5rem;">02</span>
+            <h3>Design & Prototype</h3>
+            <p>Creating high-fidelity wireframes and accessible design systems that prioritize user experience.</p>
+          </div>
+          <div class="card">
+            <span class="label" style="font-size: 1.5rem; margin-bottom: 0.5rem;">03</span>
+            <h3>Development</h3>
+            <p>Writing clean, maintainable, and type-safe code using modern full-stack technologies.</p>
+          </div>
+          <div class="card">
+            <span class="label" style="font-size: 1.5rem; margin-bottom: 0.5rem;">04</span>
+            <h3>Test & Launch</h3>
+            <p>Rigorous accessibility auditing, performance optimization, and seamless deployment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- WHAT I DO SECTION -->
     <section class="section" aria-labelledby="expertise-title">
       <div class="container">
@@ -154,6 +186,58 @@
       </div>
     </section>
 
+    <!-- FEATURED PROJECTS PREVIEW -->
+    <section class="section" style="background: var(--bg-secondary);" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem;">
+          <div>
+            <span class="label" aria-hidden="true">Portfolio</span>
+            <h2 id="featured-title" class="title">Featured Work</h2>
+          </div>
+          <a href="projects.html" class="btn btn-outline" style="margin-bottom: 1.5rem;">See All Projects &rarr;</a>
+        </div>
+        
+        <div class="skills-grid">
+          <article class="card">
+            <img src="assets/images/project1.png" alt="AI Floor Planner Preview" style="border-radius: 12px; margin-bottom: 1.5rem; width: 100%; height: 200px; object-fit: cover;">
+            <h3>AI Floor Planner</h3>
+            <p>Intelligent space planning tool with real-time suggestions.</p>
+          </article>
+          <article class="card">
+            <img src="assets/images/project2.png" alt="BharatHome Value Preview" style="border-radius: 12px; margin-bottom: 1.5rem; width: 100%; height: 200px; object-fit: cover;">
+            <h3>BharatHome Value</h3>
+            <p>Advanced property valuation and real estate data platform.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="label" aria-hidden="true">Feedback</span>
+          <h2 id="testimonials-title" class="title">What People Say</h2>
+        </div>
+        <div class="skills-grid">
+          <blockquote class="card">
+            <p style="font-style: italic; margin-bottom: 1.5rem;">"Shreyash delivered a pixel-perfect, highly accessible dashboard that surpassed all our performance metrics. Truly a pleasure to work with."</p>
+            <footer style="background: none; border: none; padding: 0;">
+              <strong>Sarah Jenkins</strong><br>
+              <span style="font-size: 0.9rem; color: var(--text-secondary);">CTO, TechFlow Inc.</span>
+            </footer>
+          </blockquote>
+          <blockquote class="card">
+            <p style="font-style: italic; margin-bottom: 1.5rem;">"His attention to detail in accessibility made our product available to thousands of new users. Highly recommend his expert skills."</p>
+            <footer style="background: none; border: none; padding: 0;">
+              <strong>David Chen</strong><br>
+              <span style="font-size: 0.9rem; color: var(--text-secondary);">Founder, EduEqual</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- SEMANTIC FOOTER -->
@@ -162,11 +246,16 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="nav-logo">Shrey<span>.</span></div>
-          <p>Designing and developing accessible, high-performance web applications with a focus on user experience.</p>
+          <p style="margin-bottom: 2rem;">Designing and developing accessible, high-performance web applications with a focus on user experience and technical excellence.</p>
+          <div class="social-links" aria-label="Social media connections">
+            <a href="#" class="theme-btn" aria-label="LinkedIn Profile">In</a>
+            <a href="#" class="theme-btn" aria-label="GitHub Profile">Gh</a>
+            <a href="#" class="theme-btn" aria-label="Twitter Profile">Tw</a>
+          </div>
         </div>
         
-        <nav class="footer-col" aria-label="Footer Navigation">
-          <h3>Links</h3>
+        <nav class="footer-col" aria-label="Quick Links">
+          <h3>Sitemap</h3>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -176,20 +265,25 @@
         </nav>
 
         <div class="footer-col">
-          <h3>Connect</h3>
-          <ul>
-            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-          </ul>
+          <h3>Stay in touch</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Subscribe to my newsletter for the latest in web accessibility and full-stack development.</p>
+          <form class="newsletter-form" aria-label="Newsletter subscription">
+            <div style="display: flex; gap: 0.5rem;">
+              <input type="email" placeholder="Email Address" aria-label="Email for newsletter" required style="padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary); width: 100%;">
+              <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1rem; border-radius: 8px;">Join</button>
+            </div>
+          </form>
         </div>
       </div>
 
       <div class="footer-bottom">
         <p>&copy; <span id="year"></span> Shreyash. All rights reserved.</p>
-        <div class="social-links" aria-label="Social media icons">
-          <!-- Social icons would go here -->
-        </div>
+        <nav aria-label="Legal navigation">
+          <ul style="display: flex; gap: 1.5rem;">
+            <li><a href="#" style="font-size: 0.85rem;">Privacy Policy</a></li>
+            <li><a href="#" style="font-size: 0.85rem;">Terms of Service</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </footer>
