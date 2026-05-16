@@ -3,12 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Shreyash - Full Stack Developer</title>
-  <meta name="description" content="Explore a collection of web development projects by Shreyash, featuring AI tools, property platforms, and mobile apps.">
+  <title>Todo App | Shreyash - Interactive Portfolio</title>
+  <meta name="description" content="A fully functional, state-driven To-Do List application built with vanilla JavaScript. Demonstrating DOM manipulation and local persistence.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Todo Specific Styles */
+    .todo-app-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .todo-input-group {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .todo-input-group input {
+      flex: 1;
+      padding: 1.25rem;
+      border-radius: 16px;
+      border: 2px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+    
+    .todo-filters {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+    
+    .filter-btn {
+      padding: 0.5rem 1.25rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: transparent;
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: 0.3s;
+    }
+    
+    .filter-btn.active {
+      background: var(--accent-primary);
+      color: #000;
+      border-color: var(--accent-primary);
+    }
+    
+    .todo-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .todo-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      transition: 0.3s;
+      animation: slideIn 0.3s ease-out;
+    }
+    
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .todo-item.completed {
+      opacity: 0.6;
+    }
+    
+    .todo-item.completed .todo-text {
+      text-decoration: line-through;
+    }
+    
+    .todo-checkbox {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      border: 2px solid var(--accent-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+    
+    .todo-checkbox.checked {
+      background: var(--accent-primary);
+    }
+    
+    .todo-checkbox.checked::after {
+      content: '✓';
+      color: #000;
+      font-weight: 900;
+      font-size: 14px;
+    }
+    
+    .todo-text {
+      flex: 1;
+      font-size: 1.05rem;
+      color: var(--text-primary);
+    }
+    
+    .todo-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .todo-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      transition: 0.3s;
+    }
+    
+    .todo-btn:hover {
+      color: var(--accent-primary);
+      border-color: var(--accent-primary);
+    }
+    
+    .todo-btn.delete:hover {
+      color: #ef4444;
+      border-color: #ef4444;
+    }
+    
+    .todo-stats {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+  </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -23,8 +165,8 @@
           <ul id="primary-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="projects.html" aria-current="page">Projects</a></li>
-            <li><a href="todo.html">Todo App</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="todo.html" aria-current="page">Todo App</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -40,83 +182,40 @@
   </header>
 
   <main id="main-content">
-    <section class="section" aria-labelledby="projects-title">
+    <section class="section" aria-labelledby="todo-title">
       <div class="container">
-        <div class="section-header">
-          <span class="label" aria-hidden="true">Portfolio</span>
-          <h1 id="projects-title" class="title">Featured Projects</h1>
-          <p>A selection of my recent work in web and mobile development.</p>
+        <div class="section-header" style="text-align: center;">
+          <span class="label" aria-hidden="true">Interactive Demo</span>
+          <h1 id="todo-title" class="title">Task Management</h1>
+          <p style="margin: 0 auto; max-width: 600px;">Experience a real-world application of DOM manipulation and local storage persistence. Manage your daily tasks efficiently.</p>
         </div>
 
-        <!-- PROJECTS GRID (Semantic Grid) -->
-        <div class="skills-grid" id="projects-list">
-          
-          <article class="card project-card" aria-labelledby="p1-title">
-            <img src="assets/images/project1.png" alt="AI Floor Planner interface" loading="lazy" style="border-radius: 16px; margin-bottom: 2rem; width: 100%; height: 250px; object-fit: cover;">
-            <span class="label" style="font-size: 0.7rem;">AI & Architecture</span>
-            <h2 id="p1-title">AI Floor Planner</h2>
-            <p>Interactive tool for designing property layouts using intelligent suggestions and real-time validation.</p>
-            <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">React</span>
-              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">Canvas API</span>
-            </div>
-          </article>
+        <div class="todo-app-container">
+          <div class="card">
+            <!-- INPUT -->
+            <form id="todo-form" class="todo-input-group">
+              <input type="text" id="todo-input" placeholder="What needs to be done?" aria-label="Add new task" required>
+              <button type="submit" class="btn btn-primary" style="padding: 1.1rem 2rem;">Add</button>
+            </form>
 
-          <article class="card project-card" aria-labelledby="p2-title">
-            <img src="assets/images/project2.png" alt="BharatHome Value dashboard" loading="lazy" style="border-radius: 16px; margin-bottom: 2rem; width: 100%; height: 250px; object-fit: cover;">
-            <span class="label" style="font-size: 0.7rem;">Real Estate</span>
-            <h2 id="p2-title">BharatHome Value</h2>
-            <p>Comprehensive property valuation platform with advanced data analytics and market trend tracking.</p>
-            <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">Next.js</span>
-              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">Spring Boot</span>
+            <!-- FILTERS -->
+            <div class="todo-filters" role="group" aria-label="Filter tasks">
+              <button class="filter-btn active" data-filter="all">All Tasks</button>
+              <button class="filter-btn" data-filter="active">Active</button>
+              <button class="filter-btn" data-filter="completed">Completed</button>
             </div>
-          </article>
 
-          <article class="card project-card" aria-labelledby="p3-title">
-            <img src="assets/images/project3.png" alt="Crypto Analytics Dashboard" loading="lazy" style="border-radius: 16px; margin-bottom: 2rem; width: 100%; height: 250px; object-fit: cover;">
-            <span class="label" style="font-size: 0.7rem;">FinTech</span>
-            <h2 id="p3-title">CryptoPulse Analytics</h2>
-            <p>Real-time cryptocurrency tracking dashboard with predictive modeling and sentiment analysis.</p>
-            <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">TypeScript</span>
-              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">D3.js</span>
+            <!-- LIST -->
+            <div id="todo-list" class="todo-list" aria-live="polite">
+              <!-- Items will be injected here -->
             </div>
-          </article>
 
-          <article class="card project-card" aria-labelledby="p4-title">
-            <img src="assets/images/project4.png" alt="EduLink Learning Management System" loading="lazy" style="border-radius: 16px; margin-bottom: 2rem; width: 100%; height: 250px; object-fit: cover;">
-            <span class="label" style="font-size: 0.7rem;">EdTech</span>
-            <h2 id="p4-title">EduLink LMS</h2>
-            <p>A fully accessible learning management system designed for inclusive remote education.</p>
-            <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">React</span>
-              <span class="theme-btn" style="width: auto; height: auto; padding: 0.4rem 1rem; font-size: 0.8rem;">Node.js</span>
+            <!-- STATS -->
+            <div class="todo-stats">
+              <span id="items-left">0 tasks remaining</span>
+              <button id="clear-completed" style="background: none; border: none; color: var(--accent-secondary); margin-left: 1rem; cursor: pointer; text-decoration: underline;">Clear Completed</button>
             </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="background: var(--bg-secondary);" aria-labelledby="method-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="label" aria-hidden="true">Approach</span>
-          <h2 id="method-title" class="title">My Project Methodology</h2>
-        </div>
-        <div class="skills-grid">
-          <article class="card">
-            <h3>User-Centric Research</h3>
-            <p>Every project starts with understanding the user. I conduct deep research to identify pain points and accessibility gaps.</p>
-          </article>
-          <article class="card">
-            <h3>Iterative Prototyping</h3>
-            <p>Rapid prototyping allows for early feedback and continuous improvement of the user interface and experience.</p>
-          </article>
-          <article class="card">
-            <h3>Robust Engineering</h3>
-            <p>I prioritize type safety, unit testing, and performance optimization to build software that lasts.</p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -193,5 +292,6 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="todo.js"></script>
 </body>
 </html>
