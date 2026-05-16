@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Portfolio projects by Shreyash - Full Stack Developer. Explore web apps, mobile designs, and AI platforms built with React, Node.js, and more.">
-<meta name="keywords" content="projects, portfolio, web development, React, Node.js, full stack, case studies">
+<meta name="description" content="Featured Projects by Shreyash - Full Stack Developer. Explore web applications, AI tools, and mobile experiences.">
+<meta name="keywords" content="projects, portfolio, web applications, react, nodejs, full stack developer">
 <meta name="author" content="Shreyash">
 <title>Projects | Shreyash - Full Stack Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,26 +17,35 @@
 
 <header role="banner">
   <div class="nav-container">
-    <div class="nav-logo"><a href="index.html" aria-label="Shreyash - Home"><span>S</span>hreyash<span>.</span></a></div><div class="nav-actions"><button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode"><span class="sun-icon" aria-hidden="true">??</span><span class="moon-icon" aria-hidden="true">??</span></button><button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
-      <span class="hamburger" aria-hidden="true"></span>
-    </button>
-    <nav aria-label="Primary navigation">
-      <ul id="primary-nav" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" aria-current="page">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="nav-logo">
+      <a href="index.html" aria-label="Shreyash - Home"><span>S</span>hrey<span>.</span></a>
+    </div>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
+        <span class="sun-icon" aria-hidden="true">☀️</span>
+        <span class="moon-icon" aria-hidden="true">🌙</span>
+      </button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+      <nav aria-label="Primary navigation">
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
 <main id="main-content">
   <section class="page-hero" aria-labelledby="projects-page-heading">
     <div class="page-hero-inner">
-      <span class="section-label" aria-hidden="true">My Work</span>
+      <span class="section-label" aria-hidden="true">My Portfolio</span>
       <h1 id="projects-page-heading">Featured Projects</h1>
-      <p>A curated selection of projects I've built � from SaaS platforms to AI tools.</p>
+      <p>A curated selection of projects I've built - from SaaS platforms to AI tools.</p>
     </div>
   </section>
 
@@ -53,122 +62,65 @@
     </div>
   </section>
 
-  <!-- PROJECTS GRID -->
-  <section aria-labelledby="projects-grid-heading" style="padding:2rem 1.5rem 5rem">
+  <section id="projects-list" aria-label="Project gallery">
     <div class="section-inner">
-      <h2 id="projects-grid-heading" class="sr-only">Projects list</h2>
-      <div class="projects-grid" id="projects-list" role="list">
-
+      <div class="projects-grid">
         <!-- Project 1 -->
-        <article class="project-card" role="listitem" data-category="web" aria-labelledby="proj1-title">
-          <img src="assets/images/project1.png" alt="BharatHome Value dashboard showing analytics charts and property valuations" class="project-img" width="400" height="200" loading="lazy">
-          <div class="project-body">
-            <div class="project-tags" aria-label="Technologies used">
-              <span class="tag">React</span>
-              <span class="tag">Spring Boot</span>
-              <span class="tag">PostgreSQL</span>
+        <article class="project-card" data-category="web">
+          <div class="project-img">
+            <img src="assets/images/project1.png" alt="AI Floor Planner dashboard interface" loading="lazy">
+          </div>
+          <div class="project-content">
+            <span class="section-label" style="font-size:.7rem">Web App</span>
+            <h3>AI Floor Planner</h3>
+            <p>A logic-based drag-and-drop tool for home layout design with expert-based suggestions.</p>
+            <div class="project-tags">
+              <span>React</span><span>Canvas API</span><span>Node.js</span>
             </div>
-            <h3 id="proj1-title">BharatHome Value</h3>
-            <p>Full-stack property valuation platform with AI-driven price estimation, user dashboards, floor planner, and admin panel. Serves 10,000+ users.</p>
             <div class="project-links">
-              <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View BharatHome Value source code on GitHub (opens in new tab)">
-                &#x1F517; Source Code
-              </a>
-              <a href="#" class="project-link" aria-label="View BharatHome Value live demo">&#x1F680; Live Demo</a>
+              <a href="#" class="btn btn-outline" style="padding:.5rem 1rem;font-size:.8rem">Live Demo</a>
+              <a href="#" class="social-link" style="width:36px;height:36px">🔗</a>
             </div>
           </div>
         </article>
 
         <!-- Project 2 -->
-        <article class="project-card" role="listitem" data-category="mobile" aria-labelledby="proj2-title">
-          <img src="assets/images/project2.png" alt="ShopEase mobile e-commerce app showing product grid with purple and white design" class="project-img" width="400" height="200" loading="lazy">
-          <div class="project-body">
-            <div class="project-tags" aria-label="Technologies used">
-              <span class="tag">React Native</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">MongoDB</span>
+        <article class="project-card" data-category="web">
+          <div class="project-img">
+            <img src="assets/images/project2.png" alt="BharatHome Value property valuation tool" loading="lazy">
+          </div>
+          <div class="project-content">
+            <span class="section-label" style="font-size:.7rem">Full Stack</span>
+            <h3>BharatHome Value</h3>
+            <p>Real-time property valuation platform with microservices architecture and interactive maps.</p>
+            <div class="project-tags">
+              <span>Next.js</span><span>Spring Boot</span><span>PostgreSQL</span>
             </div>
-            <h3 id="proj2-title">ShopEase Mobile App</h3>
-            <p>Cross-platform e-commerce mobile app with real-time inventory, secure payments via Razorpay, and push notifications for order updates.</p>
             <div class="project-links">
-              <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View ShopEase source code on GitHub (opens in new tab)">&#x1F517; Source Code</a>
-              <a href="#" class="project-link" aria-label="View ShopEase live demo">&#x1F680; Live Demo</a>
+              <a href="#" class="btn btn-outline" style="padding:.5rem 1rem;font-size:.8rem">Live Demo</a>
+              <a href="#" class="social-link" style="width:36px;height:36px">🔗</a>
             </div>
           </div>
         </article>
 
         <!-- Project 3 -->
-        <article class="project-card" role="listitem" data-category="ai" aria-labelledby="proj3-title">
-          <img src="assets/images/project3.png" alt="NeuralViz AI platform showing neural network visualization with glowing node connections" class="project-img" width="400" height="200" loading="lazy">
-          <div class="project-body">
-            <div class="project-tags" aria-label="Technologies used">
-              <span class="tag">Python</span>
-              <span class="tag">TensorFlow</span>
-              <span class="tag">FastAPI</span>
+        <article class="project-card" data-category="mobile">
+          <div class="project-img">
+            <img src="assets/images/project3.png" alt="Fitness tracker mobile app interface" loading="lazy">
+          </div>
+          <div class="project-content">
+            <span class="section-label" style="font-size:.7rem">Mobile</span>
+            <h3>FitTrack AI</h3>
+            <p>Mobile application that uses computer vision to track workout form and provide real-time feedback.</p>
+            <div class="project-tags">
+              <span>React Native</span><span>TensorFlow.js</span><span>Firebase</span>
             </div>
-            <h3 id="proj3-title">NeuralViz AI Platform</h3>
-            <p>Interactive neural network visualization tool for training ML models in-browser. Supports custom dataset uploads, live loss curves, and model export.</p>
             <div class="project-links">
-              <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View NeuralViz source code on GitHub (opens in new tab)">&#x1F517; Source Code</a>
-              <a href="#" class="project-link" aria-label="View NeuralViz live demo">&#x1F680; Live Demo</a>
+              <a href="#" class="btn btn-outline" style="padding:.5rem 1rem;font-size:.8rem">View Case Study</a>
+              <a href="#" class="social-link" style="width:36px;height:36px">🔗</a>
             </div>
           </div>
         </article>
-
-        <!-- Project 4 -->
-        <article class="project-card" role="listitem" data-category="web" aria-labelledby="proj4-title">
-          <img src="assets/images/project1.png" alt="EduWise learning management system dashboard with course progress tracking" class="project-img" width="400" height="200" loading="lazy">
-          <div class="project-body">
-            <div class="project-tags" aria-label="Technologies used">
-              <span class="tag">Next.js</span>
-              <span class="tag">Prisma</span>
-              <span class="tag">AWS S3</span>
-            </div>
-            <h3 id="proj4-title">EduWise LMS</h3>
-            <p>Learning management system with video courses, quizzes, progress tracking, and certificate generation. Built for 500+ students.</p>
-            <div class="project-links">
-              <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View EduWise LMS source code on GitHub (opens in new tab)">&#x1F517; Source Code</a>
-              <a href="#" class="project-link" aria-label="View EduWise LMS live demo">&#x1F680; Live Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 5 -->
-        <article class="project-card" role="listitem" data-category="web" aria-labelledby="proj5-title">
-          <img src="assets/images/project2.png" alt="DevLog open source project tracker with kanban board interface" class="project-img" width="400" height="200" loading="lazy">
-          <div class="project-body">
-            <div class="project-tags" aria-label="Technologies used">
-              <span class="tag">Vue.js</span>
-              <span class="tag">Firebase</span>
-              <span class="tag">Tailwind</span>
-            </div>
-            <h3 id="proj5-title">DevLog � Project Tracker</h3>
-            <p>Open-source Kanban-style project management tool with real-time collaboration, drag-and-drop tasks, and team role management.</p>
-            <div class="project-links">
-              <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View DevLog source code on GitHub (opens in new tab)">&#x1F517; Source Code</a>
-              <a href="#" class="project-link" aria-label="View DevLog live demo">&#x1F680; Live Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 6 -->
-        <article class="project-card" role="listitem" data-category="ai" aria-labelledby="proj6-title">
-          <img src="assets/images/project3.png" alt="SentimentAI dashboard showing text analysis results and sentiment graphs" class="project-img" width="400" height="200" loading="lazy">
-          <div class="project-body">
-            <div class="project-tags" aria-label="Technologies used">
-              <span class="tag">Python</span>
-              <span class="tag">BERT</span>
-              <span class="tag">React</span>
-            </div>
-            <h3 id="proj6-title">SentimentAI Analyzer</h3>
-            <p>Real-time sentiment analysis tool using fine-tuned BERT model. Analyzes customer reviews, social media posts, and feedback at scale.</p>
-            <div class="project-links">
-              <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View SentimentAI source code on GitHub (opens in new tab)">&#x1F517; Source Code</a>
-              <a href="#" class="project-link" aria-label="View SentimentAI live demo">&#x1F680; Live Demo</a>
-            </div>
-          </div>
-        </article>
-
       </div>
     </div>
   </section>
@@ -178,7 +130,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="nav-logo"><a href="index.html" aria-label="Shreyash - Home"><span>S</span>hreyash<span>.</span></a></div>
+        <div class="nav-logo"><a href="index.html" aria-label="Shreyash - Home"><span>S</span>hrey<span>.</span></a></div>
         <p>Building accessible, high-performance web experiences with passion and precision.</p>
       </div>
       <nav class="footer-col" aria-label="Footer site links">
@@ -201,7 +153,7 @@
     <div class="footer-bottom">
       <p>&copy; <span id="year"></span> Shreyash. All rights reserved.</p>
       <div class="social-links" aria-label="Social media links">
-        <a href="https://github.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#x1D53E;</a>
+        <a href="https://github.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">🔗</a>
         <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
       </div>
     </div>
@@ -210,9 +162,13 @@
 <style>
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .filter-tab{margin:0}
+.project-img { overflow: hidden; border-radius: 16px; margin-bottom: 1.5rem; }
+.project-img img { transition: 0.5s; width: 100%; height: 200px; object-fit: cover; }
+.project-card:hover .project-img img { transform: scale(1.1); }
+.project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0 1.5rem; }
+.project-tags span { font-size: 0.75rem; background: var(--bg2); padding: 0.25rem 0.75rem; border-radius: 6px; color: var(--muted); border: 1px solid var(--border); }
+.project-links { display: flex; align-items: center; gap: 1rem; }
 </style>
 <script src="main.js"></script>
 </body>
 </html>
-
-
